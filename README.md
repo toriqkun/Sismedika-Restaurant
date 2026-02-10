@@ -3,8 +3,8 @@
 Sistem Point of Sales (POS) Restoran berbasis Laravel 12 (API) dan React.js (Frontend) dengan role Pelayan dan Kasir.
 ---
 
-## ✨ Fitur Utama
-## 👤 Role & Akses
+### ✨ Fitur Utama
+### 👤 Role & Akses
 
 ### Pelayan
 - Melihat meja
