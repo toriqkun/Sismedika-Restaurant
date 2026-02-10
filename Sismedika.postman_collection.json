@@ -1,0 +1,630 @@
+{
+  "info": {
+    "_postman_id": "b54cbf14-9a9a-49ad-a525-37faedc5ebf7",
+    "name": "Sismedika",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47706566",
+    "_collection_link": "https://go.postman.co/collection/47706566-b54cbf14-9a9a-49ad-a525-37faedc5ebf7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"sismedika@mail.com\",\r\n  \"password\": \"12345678\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/logout",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "10|9DwjoBWAZ4FfUYDYX0t2tNhuqQ5G99yRPlsIhlo7bbf7361f",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Icunn",
+              "type": "text",
+              "uuid": "d03d5ea8-3646-4372-9684-8f43dbe892ab"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "701defbd-d614-441d-892f-8ade4da1d33a",
+              "src": "/C:/Users/USER/OneDrive/Pictures/pikachu.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/profile",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Food",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|RXIgQ0Hplw2llMxXabFTOK0tQ8HNrKmOMPvGjFxe3a2e57fa",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Teh Tawar Angat",
+              "type": "text",
+              "uuid": "d9db9fa6-1371-44e4-a7a0-9fe1fb06029b"
+            },
+            {
+              "key": "category",
+              "value": "makanan",
+              "type": "text",
+              "uuid": "ae9b1f0d-df05-44e5-968b-e9007bd65191"
+            },
+            {
+              "key": "price",
+              "value": "5000",
+              "type": "text",
+              "uuid": "1cfefd39-2dec-45e0-8465-c040d0473000"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "13590600-270c-40b9-9a04-6dc23a474aab",
+              "src": "/C:/Users/USER/OneDrive/Pictures/Sismedika/teh angat tawar.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Food",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "22|XSpDthziIM12QoeiCoUbvStYJHxExaelfkRzslqm1bd24018",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Food",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Food",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "22|XSpDthziIM12QoeiCoUbvStYJHxExaelfkRzslqm1bd24018",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Food",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "23|FPEtMRi6ztcuGmzxqpKFDq2Ar6qpZUizXRfPyrQlc302ea6f",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Es Cendol",
+              "type": "text",
+              "uuid": "15a62164-1664-4eb7-89d0-f9e645af08c4"
+            },
+            {
+              "key": "category",
+              "value": "makanan",
+              "type": "text",
+              "uuid": "5c2b18cd-17e8-438c-88fd-e53b82a217a2"
+            },
+            {
+              "key": "price",
+              "value": "8000",
+              "type": "text",
+              "uuid": "1ebed30c-e7fc-410b-93e0-4f1b802f29ab"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "291bdf66-b612-47c0-b89c-527a31d1665c",
+              "src": "/C:/Users/USER/OneDrive/Pictures/Sismedika/es cendol.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/11",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            "11"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Meja",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "9|ffOiGQJYoCDrzi7aCmLHJEuJ1UtNOaoijyRA04U7922eb5b8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/tables",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "tables"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Open Table Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "29|KhGqkRCcaWIZlvOWM6naxdbtg9u53qDXcrF6f40Dac479d79",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"table_id\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/open",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "open"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Menu to Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|RXIgQ0Hplw2llMxXabFTOK0tQ8HNrKmOMPvGjFxe3a2e57fa",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"order_id\": 1,\r\n    \"food_id\": 1,\r\n    \"qty\":2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/add-item",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "add-item"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Finished Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "6|KTBuUfQPzQLVNCUj3nOpiHuHYuRWwYVDu7ZiwZ7na2a7774e",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"order_id\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/finish",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "finish"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Close Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "7|HNu89FQAkf0pjDNxHZlXx6m3hhN2g7pZoExONtmS5bf2c574",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"order_id\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/close",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "close"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get List All Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "7|HNu89FQAkf0pjDNxHZlXx6m3hhN2g7pZoExONtmS5bf2c574",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Detail Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "6|KTBuUfQPzQLVNCUj3nOpiHuHYuRWwYVDu7ZiwZ7na2a7774e",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Generate PDF",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "7|HNu89FQAkf0pjDNxHZlXx6m3hhN2g7pZoExONtmS5bf2c574",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/orders/1/receipt",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "orders",
+            "1",
+            "receipt"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
