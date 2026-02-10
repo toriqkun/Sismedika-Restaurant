@@ -1,11 +1,10 @@
-Restaurant POS System (Sismedika)
+###  Restaurant POS System (Sismedika)
 
 Sistem Point of Sales (POS) Restoran berbasis Laravel 12 (API) dan React.js (Frontend) dengan role Pelayan dan Kasir.
 ---
 
-
-✨ Fitur Utama
-👤 Role & Akses
+## ✨ Fitur Utama
+## 👤 Role & Akses
 
 ### Pelayan
 - Melihat meja
@@ -164,19 +163,19 @@ Frontend berjalan di:
 http://localhost:5173
 ```
 
-** 🔐 Akun Default (Seeder)
-** 👨‍🍳 Pelayan
+## 🔐 Akun Default (Seeder)
+### 👨‍🍳 Pelayan
 ```makefile
 Email: pelayan@mail.com
 Password: password
 ```
-** 💰 Kasir
+### 💰 Kasir
 ```makefile
 Email: kasir@mail.com
 Password: password
 ```
 
-** 📍 Routing Frontend
+## 📍 Routing Frontend
 Path	                        Akses
 /	                            Landing Page
 /login	                      Login
@@ -186,22 +185,22 @@ Path	                        Akses
 /kasir/orders	                Kasir
 /orders/:id	                  Kasir
 
-** 📍 API Endpoint Ringkas
-** Auth
+## 📍 API Endpoint Ringkas
+### Auth
 - POST /login
 - POST /logout
 - GET /profile
 
-** Table
+### Table
 - GET /tables
   
-** Food
+### Food
 - GET /foods
 - POST /foods
 - POST /foods/{id}
 - DELETE /foods/{id}
 
-** Order
+### Order
 - POST /orders/open
 - POST /orders/add-item
 - POST /orders/finish
